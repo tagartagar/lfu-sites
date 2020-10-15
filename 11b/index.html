@@ -1,0 +1,182 @@
+<html>
+<head>
+    <title>11 «Б»</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .wrap {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #header {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .header__title {
+            font-size: 32px;
+        }
+
+        .header__subtitle {
+            font-size: 24px;
+        }
+
+        #nav {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+
+        #nav__reskin {
+            padding: 8px;
+            margin: 8px;
+            font-size: 18px;
+            border: 0;
+        }
+
+        #footer {
+            padding: 16px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #classlist {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .classlist__item {
+            padding: 8px;
+            margin: 8px;
+            font-size: 32px;
+        }
+
+        .classlist__item a {
+            color: inherit;
+        }
+
+        .classlist__item a:visited {
+            color: inherit;
+        }
+
+        .classlist__item_tech {
+            color: #ffffff;
+            background: #ff7208;
+        }
+
+        .classlist__item_hum {
+            color: #000000;
+            background: #7ce2ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="header__subtitle">
+                Лицей Финуниверситета
+            </div>
+            <div class="header__title">
+                11&nbsp;«Б»
+            </div>
+            <div class="header__subtitle" style="text-align: right;">
+                Выпуск №3: 2019 — 2020
+            </div>
+        </header>
+        <nav id="nav">
+            <button id="nav__reskin">
+            </button>
+        </nav>
+        <div id="content">
+            <div>
+                <div id="classlist">
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+        </footer>
+    </div>
+
+    <script>
+        let classlist = [
+            ["tech", "Агапенкова Дарья", "dasha/index.html"],
+            ["tech", "Артемов Макар", "makar/index.html"],
+            ["tech", "Зубов Кирилл", "zubov/index.html"],
+            ["tech", "Ляшенко Ярослав", "lyash/index.html"],
+            ["tech", "Немцов Дмитрий", "dima/index.html"],
+            ["tech", "Орусский Вячеслав", ""],
+            ["tech", "Петерс Сергей", "sergey/index.html"],
+            ["tech", "Романов Леонид", "leonid/index.html"],
+            ["tech", "Следевский Ярослав", "sledev/index.html"],
+            ["tech", "Смирницкая Ульяна", "yana/index.html"],
+            ["tech", "Цыбиков Тагар", ""],
+            ["tech", "Шабанов Илья", "shab/index.html"],
+            ["hum", "Алексеева Софья", ""],
+            ["hum", "Дементеева Полина", ""],
+            ["hum", "Жуков Георгий", ""],
+            ["hum", "Козлова Марина", ""],
+            ["hum", "Колесникова Ксения", ""],
+            ["hum", "Колотило Анна", ""],
+            ["hum", "Малыхина Дарья", ""],
+            ["hum", "Мирошникова Полина", ""],
+            ["hum", "Новикова Арина", ""],
+            ["hum", "Попова Наталья", ""],
+            ["hum", "Романова Анастасия", ""],
+            ["hum", "Сидоренкова Валерия", ""],
+            ["hum", "Травкин Михаил", ""],
+            ["hum", "Хизева Анастасия", ""]
+        ];
+
+        let elclass = document.getElementById("classlist");
+
+        classlist.forEach(student => {
+            let div = document.createElement("div");
+            div.innerHTML = student[2] == "" ? student[1] : ("<a href=\"" + student[2] + "\">" + student[1] + "</a>");
+            div.className = "classlist__item " + (student[0] == "tech" ? "classlist__item_tech" : "classlist__item_hum");
+            elclass.appendChild(div);
+        });
+
+        var gDarkMode = true;
+
+        stylePage(gDarkMode);
+
+        function stylePage(dark) {
+            document.body.style.color = dark ? "white" : "black";
+            document.body.style.background = dark ? "#1b1b1b" : "#fefefe";
+            document.getElementById("header").style.background = dark ? "rgba(34,34,34,.7)" : "#f2f2f2";
+            document.getElementById("footer").style.background = dark ? "rgba(34,34,34,.7)" : "#f2f2f2";
+
+            document.getElementById("nav__reskin").innerHTML = dark ? "Ночной" : "Дневной";
+            document.getElementById("nav__reskin").style.color = dark ? "white" : "black";
+            document.getElementById("nav__reskin").style.background = dark ? "#ff7208" : "#7ce2ef";
+        }
+
+        document.getElementById("nav__reskin").onclick = function() {
+            gDarkMode = !gDarkMode;
+            stylePage(gDarkMode);
+        }
+    </script>
+</body>
+</html>

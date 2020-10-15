@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font: 20px Comic Sans MS;
+       text-decoration: none;
+    background: #240801;
+}
+
+
+
+#wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#header{
+    height: 150;
+    background: black;
+    font-size: 96px;
+    color: D00000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#header__logo{
+    display: block;
+}
+
+
+#header__nav{
+    display: flex;
+    flex-direction: space-between;
+}
+
+.header__nav__btn{
+    height: 100px;
+    padding: 15px;
+    margin: 10px;
+    background: url("btn background.jpg");
+    background-size: cover;
+    text-decoration: none;
+    border-radius: 15px;
+    color: #D4C3BF;
+    font-size: 28px;
+    display: block;
+}
+
+
+
+#scene1{
+    width: 100%;
+    height: 200%;
+    background: url("hotpng.com.png");
+    display: block;
+
+
+
+}
+.scene__text{
+    font-size: 34px;
+    color: white;
+    text-shadow: #F8173E 0 0 20px;
+
+
+}
+#body1vid{
+    border: 3px solid #F8173E;
+}
+
+
+#footer{
+    background: gray;
+    font-size: 36px;
+    color: white;
+    justify-content: space-between;
+}
+
+
+
+#scene2{
+    width: 100%;
+    height: 150%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.scene2__btn{
+    align: center;
+    background: none;
+    border: none;
+
+    flex-basis: 50%;
+
+}
+
+.scene2left__btn{
+    position: relative;
+    text-decoration: none;
+    font-size: 34px;
+    color: white;
+    text-shadow: #F8173E 0 0 20px;
+}
+
+
+
+
