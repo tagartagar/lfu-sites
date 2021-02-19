@@ -1,0 +1,111 @@
+body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #1b1b1b;
+        color: white;
+}
+
+#wrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+}
+
+#header {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        background: hsla(0,0%,100%,.075);
+}
+
+.header_text {
+        font-size: 32px;
+}
+
+.header_subtext {
+        font-size: 24px;
+}
+
+#content {
+        display: grid;
+        grid-template-areas: "legend map";
+        grid-template-columns: 20% auto;
+        height: 100%;
+}
+
+#legend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+        background: rgba(34,34,34,.7);
+}
+
+.legend__item {
+        padding: 8px;
+        margin: 8px;
+        font-size: 20px;
+}
+
+#map {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+}
+
+#classlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+
+.classlist__item {
+        padding: 8px;
+        margin: 8px;
+        font-size: 24px;
+}
+
+.classlist__item sup {
+        font-size: 16px;
+        text-decoration: none;
+}
+
+.classlist__item a {
+        color: inherit;
+}
+
+.classlist__item a:visited {
+        color: inherit;
+}
+
+.classlist__item_tech {
+        color: #ffffff;
+        background: #4589ff;
+}
+
+.classlist__item_hum {
+        color: #ffffff;
+        background: #fa4d56;
+}
+
+.classlist__item_soc {
+        color: #ffffff;
+        background: #24a148;
+}
+
+.classlist__item_teacher {
+        color: #ffffff;
+        background: #a56eff;
+}
+
+.classlist__item_author {
+        color: #ffffff;
+        background: #4589ff;
+}
