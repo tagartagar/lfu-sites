@@ -44,6 +44,19 @@ body {
         background: rgba(34,34,34,.7);
 }
 
+#legend__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+        height: 100%;
+}
+
+#legend_counter {
+        padding: 8px;
+}
+
 .legend__item {
         padding: 8px;
         margin: 8px;
