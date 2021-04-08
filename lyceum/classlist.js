@@ -52,5 +52,5 @@ let classlist = [
         ["tech", "Шабанов Илья", "tech/shab/index.html"],
         ["teacher", "<sup>Преподаватель</sup> Алиев Самир Алиевич", ""],
         ["teacher", "<sup>Преподаватель</sup> Бушуев Алексей Михайлович", ""],
-        ["author", "Цыбиков Тагар", "tech/tagar/index.html", "<sup>Автор сайта</sup>"]
+        ["author", "Цыбиков Тагар", "", "<sup>Автор сайта</sup>"]
 ]

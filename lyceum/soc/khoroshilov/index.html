@@ -1,0 +1,51 @@
+<HTML>
+
+<HEAD>
+
+<TITLE> Мой новый сайт </TITLE>
+
+<BODY BGCOLOR="white">
+</HEAD>
+<script type="text/javascript" src="http://nickolay.info/jscript/chessJs/chess.js"></script>
+<script type="text/javascript" src="http://nickolay.info/jscript/chessJs/chessGui.js"></script>
+<script type="text/javascript">
+ config.pieceDir = "http://nickolay.info/jscript/chessJs/" + config.pieceDir;
+</script>
+<form name="chessFormId" id="chessFormId">
+ <div align="center">
+  <div id="chessDivId" style="width:328px"></div>
+  <p><span id="chessDivIdSpan" style="color:green"></span></p>
+  <input id="chessUndoId" type="button" value="Отменить ход"/>
+  <p id="notId"></p>
+ </div>
+</form>
+<script type="text/javascript">
+ SetDiagram("chessDivId", 
+  "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", 
+  "chessUndoId","notId");
+</script>
+<P align="middle">
+<table border ="1">
+<caption> Таблица острых дебютов </caption>
+<tr>
+<th> за белых </th>
+<th> за черных </th>
+</tr>
+<tr>
+<td> Bongcloud </td>
+<td> Bongcloud </td>
+</tr>
+<tr>
+<td> Атак Гроба </td>
+<td> Вариант дракона </td>
+</tr>
+</table border>
+</P>
+<P align = "justify"><a href="http://nickolay.info/jscript/js_chessform.html"target=_blank>Источник</a>
+<P align = "justify">Сицилианская защита
+</P>
+<img src="wichtig/sicilian.png"></P>
+
+</ol>
+</body>
+</html>
